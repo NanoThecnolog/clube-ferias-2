@@ -1,0 +1,40 @@
+.bannerSlider {
+    width: 100%;
+    overflow: hidden;
+
+    :global(.swiper-pagination-bullet) {
+        background-color: #eaeaea;
+        opacity: .5;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        background-color: #fff;
+        opacity: 1;
+    }
+}
+
+.swiper {
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+}
+
+.bannerButton {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+}
+
+.bannerImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    user-select: none;
+}

@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    padding: 48px 7.5vw 72px;
+    background: #f7f7f8;
+}
+
+.topContainer {
+    margin-bottom: 44px;
+
+    p {
+        margin: 0 0 14px;
+        color: #2537ff;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 3.4vw, 3rem);
+        line-height: 1.1;
+        font-weight: 900;
+        color: #3f414b;
+    }
+}
+
+.faqContainer {
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #cfcfd4;
+
+    &:first-child {
+        background: #f1f1f2;
+        border-bottom: none;
+    }
+}
+
+.line+.line {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px 56px;
+    }
+
+    .topContainer {
+        margin-bottom: 32px;
+
+        p {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+        }
+    }
+}

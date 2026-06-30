@@ -1,0 +1,117 @@
+.navContainer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    background-color: rgb(226, 226, 226);
+    color: black;
+
+    width: calc(100% - 32px);
+    max-width: 950px;
+    min-height: 50px;
+    //height: 30px;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    .phoneContainer,
+    .emailContainer {
+        flex: 1;
+
+        //height: 100%;
+        min-height: 50px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        background-color: white;
+
+        padding: 10px 20px;
+
+        cursor: pointer;
+
+        transition: .2s ease;
+
+        span {
+            white-space: nowrap;
+        }
+
+        svg {
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        @media(pointer: fine) and (hover: hover) {
+            &:hover {
+                background-color: rgb(245, 245, 245);
+            }
+        }
+    }
+
+    .phoneContainer {
+        svg {
+            color: rgb(0, 98, 0)
+        }
+    }
+
+    .emailContainer {
+
+        svg {
+            color: var(--orange);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navContainer {
+        top: 10px;
+
+        width: calc(100% - 20px);
+
+        .phoneContainer,
+        .emailContainer {
+            padding: 10px 14px;
+            gap: 8px;
+
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .navContainer {
+        flex-direction: column;
+
+        height: auto;
+
+        border-radius: 1.2rem;
+
+        .phoneContainer,
+        .emailContainer {
+            justify-content: flex-start;
+
+            min-height: 48px;
+
+            padding: 12px 16px;
+
+            span {
+                font-size: 0.85rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

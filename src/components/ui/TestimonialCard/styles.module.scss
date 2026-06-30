@@ -1,0 +1,90 @@
+.container {
+    width: 100%;
+    max-width: 392px;
+    min-height: 380px;
+    padding: 24px 24px 22px;
+    border-radius: 14px;
+    background: #fff;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.imageContainer {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #e5e7eb;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name,
+.location {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #4a4a4a;
+}
+
+.textContainer {
+    flex: 1;
+
+    p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.55;
+        color: #444;
+    }
+}
+
+.quoteContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    color: #2d2dff;
+
+    svg {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .name,
+    .location {
+        font-size: 1.12rem;
+    }
+
+    .textContainer p {
+        font-size: 0.95rem;
+    }
+}

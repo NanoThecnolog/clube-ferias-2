@@ -1,0 +1,94 @@
+.content {
+    width: 100%;
+    max-width: 90vw;
+    padding: 32px 4vw 64px;
+    background: #f7f7f8;
+}
+
+.textContainer {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        font-weight: 800;
+        color: #050505;
+    }
+
+    p {
+        margin: 0;
+        font-size: clamp(1.2rem, 2vw, 1.55rem);
+        color: #6f7280;
+    }
+}
+
+.taxesContainer {
+    text-align: center;
+    margin-bottom: 64px;
+
+    h3 {
+        margin: 0 0 24px;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-weight: 800;
+        color: #ed2024;
+    }
+
+    p {
+        margin: 0;
+        font-size: clamp(1rem, 1.4vw, 1.15rem);
+        font-weight: 800;
+        color: #050505;
+    }
+}
+
+.redPrice {
+    color: #ed2024;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.bluePrice {
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.plansContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.planItem {
+    display: flex;
+    justify-content: center;
+
+    >* {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .plansContainer {
+        grid-template-columns: repeat(2, minmax(280px, 420px));
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 32px 20px 48px;
+    }
+
+    .taxesContainer {
+        margin-bottom: 40px;
+    }
+
+    .plansContainer {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

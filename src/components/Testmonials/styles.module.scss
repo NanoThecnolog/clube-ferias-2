@@ -1,0 +1,201 @@
+.container {
+    width: 100%;
+    padding: 70px 0 64px 5vw;
+    background: #2d2dff;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.textContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    svg {
+        flex: 0 0 auto;
+        width: 92px;
+        height: 92px;
+        color: #10d6c4;
+    }
+
+    h1 {
+        max-width: 440px;
+        margin: 34px 0 0;
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.1;
+        font-weight: 900;
+    }
+}
+
+.logoContainer {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: min(260px, 70%);
+        height: auto;
+        display: block;
+    }
+}
+
+.sliderContainer {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    overflow: visible;
+}
+
+.slide {
+    height: auto;
+
+    >* {
+        height: 100%;
+    }
+}
+
+.controls {
+    position: relative;
+    min-height: 58px;
+}
+
+.pagination {
+    position: absolute;
+    left: 22%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+
+    :global(.swiper-pagination-bullet) {
+        width: 8px;
+        height: 8px;
+        margin: 0 5px;
+        background: #fff;
+        opacity: 0.45;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        opacity: 1;
+    }
+}
+
+.navigation {
+    position: absolute;
+    right: 8vw;
+    top: 0;
+    display: flex;
+    gap: 14px;
+}
+
+.prevButton,
+.nextButton {
+    width: 56px;
+    height: 56px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.prevButton {
+    background: rgba(255, 255, 255, 0.32);
+    color: #2d2dff;
+}
+
+.nextButton {
+    background: #fff;
+    color: #2d2dff;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+    transform: translateY(-1px);
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 56px 20px;
+    }
+
+    .contentContainer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .textContainer {
+        justify-content: center;
+
+        h1 {
+            margin-top: 20px;
+        }
+    }
+
+    .logoContainer {
+        margin-top: 36px;
+    }
+
+    .swiper {
+        overflow: hidden;
+    }
+
+    .pagination {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navigation {
+        right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .textContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        svg {
+            width: 72px;
+            height: 72px;
+        }
+    }
+
+    .controls {
+        min-height: 112px;
+    }
+
+    .pagination {
+        top: 18px;
+    }
+
+    .navigation {
+        top: 48px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}

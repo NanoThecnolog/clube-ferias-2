@@ -1,0 +1,161 @@
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    padding: 86px 10vw 72px;
+    overflow: hidden;
+    background-image: url("/image-call-to-action.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.contentContainer {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+    color: #fff;
+
+    h1 {
+        max-width: 600px;
+        margin: 0 0 30px;
+        font-size: clamp(2.4rem, 4vw, 4.2rem);
+        line-height: 1.15;
+        font-weight: 900;
+    }
+
+    p {
+        max-width: 720px;
+        margin: 0 0 48px;
+        font-size: clamp(1.2rem, 2vw, 1.7rem);
+        line-height: 1.28;
+    }
+}
+
+.buttonContainer {
+    width: min(100%, 720px);
+    padding: 12px;
+    border-radius: 8px;
+    //background: #fff;
+
+    button {
+        width: 100%;
+        min-height: 64px;
+        border: 0;
+        border-radius: 999px;
+        background: #fff;
+        color: #2d2dff;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: .1px;
+        cursor: pointer;
+        transition: filter 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
+    }
+}
+
+.miniCardsContainer {
+    position: absolute;
+    top: 48px;
+    right: 8vw;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+/* formas */
+.container {
+    &::after {
+        content: "";
+        position: absolute;
+        left: -18vw;
+        top: -32vw;
+        z-index: 2;
+        width: 78vw;
+        height: 92vw;
+        border-radius: 0 0 100% 0;
+        background: #2d2dff;
+    }
+}
+
+.shapes {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 190px;
+    pointer-events: none;
+}
+
+.yellowShape {
+    fill: #d7ff00;
+}
+
+.purpleShape {
+    fill: #9645f5;
+}
+
+.orangeShape {
+    fill: #ff8a0d;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        padding: 72px 6vw 220px;
+
+        &::after {
+            left: -42vw;
+            top: -26vw;
+            width: 120vw;
+            height: 130vw;
+        }
+    }
+
+    .miniCardsContainer {
+        position: relative;
+        top: auto;
+        right: auto;
+        z-index: 4;
+        margin-top: 48px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 56px 20px 180px;
+    }
+
+    .buttonContainer {
+        padding: 8px;
+
+        button {
+            min-height: 56px;
+            padding: 0 18px;
+            font-size: 0.95rem;
+        }
+    }
+
+    .miniCardsContainer {
+        width: 100%;
+        align-items: center;
+    }
+
+    .shapes {
+        height: 130px;
+    }
+}
