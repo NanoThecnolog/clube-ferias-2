@@ -1,0 +1,26 @@
+.buttonContainer {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9;
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+
+    .button {
+        background-color: #017b0d;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

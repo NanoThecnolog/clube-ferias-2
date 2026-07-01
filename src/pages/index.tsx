@@ -10,6 +10,7 @@ import CallToActionTwo from "@/components/CallToActionTwo";
 import FAQ from "@/components/FAQ";
 import Modal from "@/components/ui/Modal";
 import { useState } from "react";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -35,12 +36,7 @@ export default function Home() {
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
         />
-        {
-
-
-          //<CallToActionTwo/>
-          //
-        }
+        <WhatsappButton />
       </main>
     </>
   );
