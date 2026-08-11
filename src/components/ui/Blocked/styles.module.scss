@@ -1,0 +1,205 @@
+.page {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    background:
+        radial-gradient(circle at top,
+            rgba(142, 58, 255, 0.15),
+            transparent 35%),
+        #08080c;
+    color: #ffffff;
+}
+
+.backgroundGlow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    background: rgba(122, 43, 255, 0.14);
+    filter: blur(120px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 42rem);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    background: rgba(18, 18, 26, 0.88);
+    box-shadow:
+        0 2rem 6rem rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    text-align: center;
+    backdrop-filter: blur(16px);
+
+    h4 {
+        margin: 1rem auto 0;
+        font-size: clamp(0.8rem, 2vw, 1.8rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+    }
+}
+
+.iconContainer {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 1px solid rgba(255, 183, 77, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 183, 77, 0.1);
+    color: #ffb74d;
+    font-size: 2.3rem;
+}
+
+.status {
+    display: inline-flex;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(255, 183, 77, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 183, 77, 0.08);
+    color: #ffc46b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.description {
+    max-width: 34rem;
+    margin: 1.25rem auto 0;
+    color: #aaaab5;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.035);
+    text-align: left;
+
+    >svg {
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+        color: #a971ff;
+        font-size: 1.5rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    strong {
+        color: #ffffff;
+        font-size: 0.95rem;
+    }
+
+    span {
+        color: #92929e;
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    min-height: 3.2rem;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.2rem;
+    border-radius: 0.8rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.primaryButton {
+    border: 1px solid #7c3aed;
+    background: #7c3aed;
+    color: #ffffff;
+
+    &:hover {
+        background: #8b4cf5;
+    }
+}
+
+.secondaryButton {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: transparent;
+    color: #d6d6dc;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.support {
+    margin: 1.5rem 0 0;
+    color: #74747f;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .page {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 2rem 1.25rem;
+        border-radius: 1.2rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+    }
+}

@@ -4,3 +4,5 @@ o que ta faltando
 
 dados de contato (email, telefone)
 domínio
+email: contato@clubbancorbras.com.br
+senha: bancor123
