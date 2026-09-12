@@ -15,7 +15,7 @@ import BlockedPage from "@/components/ui/Blocked";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isBlocked = false;
+  const isBlocked = true;
 
   return (
     <>
